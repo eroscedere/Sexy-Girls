@@ -240,11 +240,12 @@ section {
 
   background-color: #1212123b;
 
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .section-girl-perfil .girl-perfil-tags {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -253,6 +254,8 @@ section {
 
   border-radius: 15px;
   background-color: #e64f77;
+
+  font-size: 0.9rem;
 
   cursor: pointer;
 
@@ -354,6 +357,52 @@ section {
   background-size: cover;
 
   cursor: pointer;
+}
+
+.container-girls-view-photo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: none;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 100vh;
+  padding: 10px;
+
+  background: none;
+  backdrop-filter: blur(2px);
+
+  z-index: 99;
+}
+
+.container-girls-view-photo button {
+  display: flex;
+
+  width: min-content;
+
+  background: none;
+  border: none;
+
+  color: #e0e0e0;
+
+  cursor: pointer;
+
+  transition: all 0.3s;
+}
+
+.container-girls-view-photo button:hover {
+  transform: scale(1.1);
+}
+
+.container-girls-view-photo img {
+  display: block;
+
+  height: 90%;
+
+  margin: auto;
 }
 
 /*-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~*/

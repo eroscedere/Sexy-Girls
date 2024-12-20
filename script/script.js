@@ -83,7 +83,7 @@ girls.map((e, i) => {
   img.addEventListener("click", () => {
     hiddenSection();
     showGirlPerfil(i);
-    showGirlFotos(i);
+    showGirlPhotos(i);
   });
 
   img.src = e.perfil;
@@ -115,7 +115,7 @@ const showGirlPerfil = (i) => {
   DOM.girlAmount.textContent = girls[i].fotos.length;
 };
 
-const showGirlFotos = (i) => {
+const showGirlPhotos = (i) => {
   DOM.girlPhotos.innerHTML = "";
 
   girls[i].fotos.forEach((e) => {
@@ -123,6 +123,16 @@ const showGirlFotos = (i) => {
 
     div.style.backgroundImage = `url("${e}")`;
 
+    div.addEventListener("click", () => {
+      DOM.containerGirlsViewPhoto.style.display = "flex";
+
+      DOM.girlsViewPhoto.src = e;
+    });
+
     DOM.girlPhotos.appendChild(div);
   });
 };
+
+DOM.buttonCloseGirlsPhoto.addEventListener("click", () => {
+  DOM.containerGirlsViewPhoto.style.display = "none";
+});

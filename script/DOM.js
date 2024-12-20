@@ -14,4 +14,9 @@ export const DOM = {
   buttonGirlPerfilVideos: document.querySelector(".button-girl-perfil-videos"),
   girlPhotos: document.querySelector(".girl-perfil-photos"),
   girlVideos: document.querySelector(".girl-perfil-videos"),
+  buttonCloseGirlsPhoto: document.querySelector(".button-close-girl-photos"),
+  containerGirlsViewPhoto: document.querySelector(
+    ".container-girls-view-photo"
+  ),
+  girlsViewPhoto: document.querySelector(".girl-view-photo"),
 };
